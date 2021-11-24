@@ -39,7 +39,7 @@ const SiteFooter = () => {
     },
   ];
 
-  return (
+  return (null/*
     <footer className="relative px-8 py-6 md:py-4 mt-8 bg-gray-100">
       <div className="max-w-screen-xl mx-auto md:flex md:items-center">
         <div className="text-center mb-4 md:mb-0 md:text-left flex-shrink-0 relative">
@@ -104,7 +104,7 @@ const SiteFooter = () => {
           </ul>
         </div>
       </div>
-    </footer>
+    </footer>*/
   );
 };
 

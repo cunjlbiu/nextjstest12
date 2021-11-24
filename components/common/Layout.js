@@ -50,7 +50,7 @@ function Layout(props) {
         {isPreview && <LoadingWidget message="Loading Preview Mode" />}
         {!isPreview && (
           <div id="site">
-            <PreviewBar {...props} />
+
             <div className="flex flex-col min-h-screen">
               <SiteHeader {...props} />
               <main className="flex-grow">

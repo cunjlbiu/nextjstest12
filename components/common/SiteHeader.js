@@ -19,21 +19,18 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
   }
 
   return (
-    <header className="relative w-full mx-auto bg-white px-8">
+    <header className="relative w-full mx-auto bg-white px-8 bg-gray-500">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <Link href="/">
               <a className="flex items-center">
                 <img
-                  className="h-14 sm:h-20 w-auto z-50"
+                  className="h-14 w-auto z-50"
                   src={header.logo.url}
                   alt={header.logo.label}
                   title={header.logo.siteName}
                 />
-                <p className="font-bold text-xl text-secondary-500 ml-3 mt-2">
-                  {header.siteName}
-                </p>
               </a>
             </Link>
           </div>

@@ -8,7 +8,7 @@ import {
 
 /**
  * This is a preview bar that is enabled by default to handle viewing content in preview & live mode, remove this for production use.
- **/
+**/
 
 const PreviewBar = ({ isPreview, isDevelopmentMode }) => {
   const [open, setOpen] = useState(false);
@@ -47,7 +47,7 @@ const PreviewBar = ({ isPreview, isDevelopmentMode }) => {
     }
   };
 
-  return (
+  return (null/*
     <div className="bg-agility relative px-8 text-gray-200">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto">
         <div className="flex items-center">
@@ -152,7 +152,7 @@ const PreviewBar = ({ isPreview, isDevelopmentMode }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>*/
   );
 };
 
