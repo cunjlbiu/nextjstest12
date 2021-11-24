@@ -5,7 +5,7 @@ const TeamMembersListing = ({module}) =>{
     const {fields} = module;
 
     return(
-        <div className="max-w-screen-xl mx-auto grid gap-y-10 gap-x-7 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="max-w-screen-xl my-16 mx-auto grid gap-y-10 gap-x-7 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {fields.member.map((member,index) =>(
                 <div>
                     <AgilityImage src={member.fields.image.url} height="350" width="300"/>
