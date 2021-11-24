@@ -20,3 +20,7 @@
 .prose blockquote {
   color: #243e63;
 }
+.two-column-text{
+  column-count: 2;
+  column-width: auto;
+}
