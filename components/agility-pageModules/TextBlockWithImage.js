@@ -46,7 +46,7 @@ const TextBlockWithImage = ({ module }) => {
                 src={fields.image.url}
                 alt={fields.image.label}
                 width="768"
-                height="512"
+                height="900"
                 className="rounded-lg object-cover object-center cursor-pointer"
               />
             </Link>
@@ -55,7 +55,7 @@ const TextBlockWithImage = ({ module }) => {
               src={fields.image.url}
               alt={fields.image.label}
               width="768"
-              height="512"
+              height="900"
               className="rounded-lg object-cover object-center"
             />
           )}

@@ -12,7 +12,7 @@ const Heading = ({ module }) => {
         if (isUrlAbsolute(url) === false) {
             return (
                 <Link href={url} title={text} target={target}>
-                    <a className="inline-block mt-8 md:mt-8 px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-500 hover:bg-primary-700 focus:outline-none focus:border-primary-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                    <a className="inline-block mt-8 md:mt-8 px-8 py-3 border border-transparent text-base leading-6 font-medium text-white bg-gray-900 hover:bg-gray-700 focus:outline-none focus:border-primary-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
                         {text}
                     </a>
                 </Link>
@@ -39,9 +39,9 @@ const Heading = ({ module }) => {
           {fields.title}
         </h1>
         <h2 className="font-display text-xl w-auto md:w-2/5 mt-10">
-            {fields.buttontext}
+            {fields.text}
         </h2>
-          {!fields.buttonvisible ? "true":(generateLink(fields.buttonUrl.url, fields.buttonUrl.target, fields.buttonUrl.text ))}
+          {fields.buttonVisible != "true" ? "tru" : (generateLink(fields.buttonUrl.href, fields.buttonUrl.target, fields.buttonUrl.text ))}
       </div>
     </div>
   );
