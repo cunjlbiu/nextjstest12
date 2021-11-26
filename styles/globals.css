@@ -20,6 +20,13 @@
 .prose blockquote {
   color: #243e63;
 }
+
+@layer base {
+  ul {
+    @apply list-disc;
+  }
+}
+
 .two-column-text{
   column-count: 2;
   column-width: auto;
