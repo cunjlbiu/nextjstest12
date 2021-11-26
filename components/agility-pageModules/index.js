@@ -9,6 +9,8 @@ import TwoColumnTextWithImage from "./TwoColumnTextWithImage"
 import TeamMembersListing from "./TeamMembersListing"
 import ImageRowsWithTitle from "./ImageRowsWithTitle"
 import Testimonials from "./Testimonials"
+import TitledList from "./TitledList"
+import ImageCarouselWithText from "./ImageCarouselWithText"
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
 // Place Page Modules in allModules array below, passing in a name and the component.
@@ -16,6 +18,7 @@ import Testimonials from "./Testimonials"
 const allModules = [
   { name: "TextBlockWithImage", module: TextBlockWithImage },
   { name: "Heading", module: Heading },
+  { name: "TitledList", module: TitledList },
   { name: "FeaturedPost", module: FeaturedPost },
   { name: "PostsListing", module: PostsListing },
   { name: "PostDetails", module: PostDetails },
@@ -25,6 +28,7 @@ const allModules = [
   { name: "TeamMembersListing", module: TeamMembersListing },
   { name: "ImageRowsWithTitle", module: ImageRowsWithTitle},
   { name: "Testimonials", module: Testimonials},
+  { name: "ImageCarouselWithText", module: ImageCarouselWithText},
 
 ];
 
