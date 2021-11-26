@@ -31,7 +31,6 @@ const Heading = ({ module }) => {
             );
         }
     };
-  //mx-auto my-12 md:mt-18 lg:mt-32 h-56
   return (
     <div className="relative px-8 bg-gray-500 h=56 mb-10">
       <div className="max-w-screen-xl mx-auto py-32 ">

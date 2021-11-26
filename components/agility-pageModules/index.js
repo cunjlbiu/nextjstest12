@@ -10,6 +10,8 @@ import TeamMembersListing from "./TeamMembersListing"
 import ImageRowsWithTitle from "./ImageRowsWithTitle"
 import Testimonials from "./Testimonials"
 import TitledList from "./TitledList"
+import SingleTitle from "./SingleTitle"
+import Separator from "./Separator"
 import ImageCarouselWithText from "./ImageCarouselWithText"
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
@@ -18,6 +20,8 @@ import ImageCarouselWithText from "./ImageCarouselWithText"
 const allModules = [
   { name: "TextBlockWithImage", module: TextBlockWithImage },
   { name: "Heading", module: Heading },
+  { name: "Separator", module: Separator },
+  { name: "SingleTitle", module: SingleTitle },
   { name: "TitledList", module: TitledList },
   { name: "FeaturedPost", module: FeaturedPost },
   { name: "PostsListing", module: PostsListing },
