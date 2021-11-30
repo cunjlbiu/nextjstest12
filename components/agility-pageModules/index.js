@@ -13,12 +13,15 @@ import TitledList from "./TitledList"
 import SingleTitle from "./SingleTitle"
 import Separator from "./Separator"
 import ImageCarouselWithText from "./ImageCarouselWithText"
+import resttest from "./resttest"
+
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
 // Place Page Modules in allModules array below, passing in a name and the component.
 
 const allModules = [
   { name: "TextBlockWithImage", module: TextBlockWithImage },
+  { name: "resttest", module: resttest },
   { name: "Heading", module: Heading },
   { name: "Separator", module: Separator },
   { name: "SingleTitle", module: SingleTitle },
