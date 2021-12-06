@@ -1,16 +1,22 @@
 import React from "react";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const resttest = ({module}) =>{
     const {fields} = module;
-
-    return(
-        <div className={"bg-gray-900 h-52"}>
-            <div className="flex flex-col max-w-screen-xl mx-auto">
-                <div className={"text-6xl font-bold text-gray-100 mt-10 mb-3"}>{fields.text}</div>
-                <div className={"text-xl text-gray-100"}>{fields.text}</div>
-
-            </div>
-        </div>
-    );
+    const { data: session } = useSession()
+    if (session) {
+        return (
+            <>
+                Signed in as {session.user.email} <br />
+                <button onClick={() => signOut()}>Sign out</button>
+            </>
+        )
+    }
+    return (
+        <>
+            Not signed in <br />
+            <button onClick={() => signIn()}>Sign in</button>
+        </>
+    )
 }
 export default resttest;
