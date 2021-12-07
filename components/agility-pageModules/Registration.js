@@ -16,7 +16,7 @@ const Registration = ({module}) =>{
            if (!userData[dat].length)
                return alert("No empty Fields!!!!")
         }
-        const register =  await fetch('http://localhost:3000/api/SFRegister',{
+        const register =  await fetch('https://cinemedtest.vercel.app/api/SFRegister',{
             method: "POST",
             body: JSON.stringify(userData)
         })
