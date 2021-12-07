@@ -14,6 +14,7 @@ import SingleTitle from "./SingleTitle"
 import Separator from "./Separator"
 import ImageCarouselWithText from "./ImageCarouselWithText"
 import resttest from "./resttest"
+import Registration from "./Registration"
 
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
@@ -22,6 +23,7 @@ import resttest from "./resttest"
 const allModules = [
   { name: "TextBlockWithImage", module: TextBlockWithImage },
   { name: "resttest", module: resttest },
+  { name: "Registration", module: Registration },
   { name: "Heading", module: Heading },
   { name: "Separator", module: Separator },
   { name: "SingleTitle", module: SingleTitle },
