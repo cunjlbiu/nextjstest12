@@ -1,5 +1,15 @@
-
 let ACCESSSTOKEN;
+const auth = (cred, user)=> {
+    if (cred.totalSize == 1 && cred.records[0].Email == user.username && cred.records[0].Credentials__c == user.password){
+        return {
+            id: cred.records[0].Id,
+            name: cred.records[0].Name,
+            email: cred.records[0].Email
+        }
+    }
+    return false
+
+}
 
 export default async function handler(req, res) {
     const {
@@ -12,12 +22,25 @@ export default async function handler(req, res) {
                     method: 'POST'
                 });
                 ACCESSSTOKEN = await response.json()
+                let user = await fetch(`https://cinemed--cinemedsb.my.salesforce.com/services/data/v52.0/query/?q=SELECT+name,+id,Account.name,account.id,email,Credentials__c+from+Contact+where+Email=%27${req.body.username}%27`,{
+                    headers : {"Authorization" :`${ACCESSSTOKEN.token_type} ${ACCESSSTOKEN.access_token}`,
+                               "Content-Type": "application/json" }
+                })
+                let credentials = await user.json();
+                console.log("А вот и секретные документики подъехали");
+                console.log(credentials);
+                res.status(200).json(auth(credentials, req.body));
 
-                res.status(200).json(req.body.party);
             }
             else {
-
-                res.status(200).json(req.body.name);
+                let user = await fetch(`https://cinemed--cinemedsb.my.salesforce.com/services/data/v52.0/query/?q=SELECT+name,+id,Account.name,account.id,email,Credentials__c+from+Contact+where+Email=%27${req.body.username}%27`,{
+                    headers : {"Authorization" :`${ACCESSSTOKEN.token_type} ${ACCESSSTOKEN.access_token}`,
+                        "Content-Type": "application/json" }
+                })
+                let credentials = await user.json();
+                console.log("А вот и секретные документики подъехали");
+                console.log(credentials)
+                res.status(200).json(auth(credentials,req.body));
             }
             break;
         case 'GET':
