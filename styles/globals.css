@@ -21,6 +21,8 @@
   color: #243e63;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
+
 @layer base {
   ul {
     @apply list-disc;
@@ -30,4 +32,71 @@
 .two-column-text{
   column-count: 2;
   column-width: auto;
+}
+.hopa {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+
+}
+.left-border{
+  border-left: 2px;
+  border-style: solid;
+  border-color: #1C58F8;
+}
+.bttn1{
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+
+}
+.b1{
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 88px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+h2 {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+h3 {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: 'Outfit', sans-serif;
+}
+caption.c1{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  font-family: 'Outfit', sans-serif;
+}
+caption.c2{
+   font-size: 18px;
+   line-height: 32px;
+  font-weight: 600;
+   font-family: 'Outfit', sans-serif;
+ }
+
+caption.c3{
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
 }

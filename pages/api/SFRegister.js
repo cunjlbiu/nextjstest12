@@ -28,14 +28,12 @@ export default async function handler(req, res) {
             console.log("emailresult!!!!");
             console.log(JSON.parse(req.body).Email);
             let emailCheck = await fetch(`https://cinemed--cinemedsb.my.salesforce.com/services/data/v52.0/query/?q=SELECT+name,+id,Account.name,account.id,email,Credentials__c+from+Contact+where+Email=%27${JSON.parse(req.body).Email}%27`,{
-                headers : {"Authorization" :`${ACCESSSTOKEN.token_type} ${ACCESSSTOKEN.access_token}`,
+                headers : {"Authorization":`${ACCESSSTOKEN.token_type} ${ACCESSSTOKEN.access_token}`,
                     "Content-Type": "application/json" }
             })
             let emailResult = await emailCheck.json()
-            console.log("emailresult");
             console.log(emailResult);
             if (emailResult.totalSize != 0){
-                console.log("fail!!!!!");
                 res.status(200).json(JSON.stringify({success: false, Error:"User with this email already exists"}))
                 break;
             }
@@ -49,8 +47,6 @@ export default async function handler(req, res) {
             })
 
             let credentials = await user.json();
-            console.log("А вот и секретные документики подъехали");
-            console.log(credentials)
             res.status(200).json(credentials);
 
             break;

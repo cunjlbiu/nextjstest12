@@ -20,6 +20,8 @@ function Layout(props) {
     pageTemplateName,
   } = props;
 
+  console.log({...props});
+
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
   const router = useRouter();
@@ -54,7 +56,7 @@ function Layout(props) {
             <div className="flex flex-col min-h-screen">
               <SiteHeader {...props} />
               <main className="flex-grow">
-                <AgilityPageTemplate {...props} />
+                  <AgilityPageTemplate {...props} />
               </main>
               <SiteFooter {...props} />
             </div>
@@ -64,5 +66,5 @@ function Layout(props) {
     </>
   );
 }
-
+console.log("zaebis voda3");
 export default Layout;

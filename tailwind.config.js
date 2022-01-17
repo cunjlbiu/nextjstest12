@@ -58,6 +58,11 @@ module.exports = {
           900: "#1a202c",
         },
         primary: {
+          capri:"#1CB7F8",
+          blue: "#1C58F8",
+          darkblue: "#0F1847",
+          grey: "#04182e",
+          white: "#FFFFFF",
           100: "#a273ff",
           200: "#935bff",
           300: "#8344ff",
@@ -67,6 +72,14 @@ module.exports = {
           700: "#5011cc",
           800: "#460fb3",
           900: "#3c0d99",
+        },
+        soft:{
+          blue: "#F0F9FF",
+          green: "#E6FaF5",
+          yellow: "#FEF5C4",
+          orange: "#FFF5F0",
+          purple: "#F2F5FF"
+
         },
         secondary: {
           100: "#7c8ba1",
@@ -78,6 +91,8 @@ module.exports = {
           700: "#1d324f",
           800: "#192b45",
           900: "#16253b",
+          blue: "#C9D5FD",
+          green: "#7ED2BF"
         },
       },
     },

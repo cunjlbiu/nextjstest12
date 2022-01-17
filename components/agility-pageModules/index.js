@@ -15,6 +15,7 @@ import Separator from "./Separator"
 import ImageCarouselWithText from "./ImageCarouselWithText"
 import resttest from "./resttest"
 import Registration from "./Registration"
+import HomeHeading from "./HomeHeading";
 
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
@@ -38,6 +39,7 @@ const allModules = [
   { name: "ImageRowsWithTitle", module: ImageRowsWithTitle},
   { name: "Testimonials", module: Testimonials},
   { name: "ImageCarouselWithText", module: ImageCarouselWithText},
+  { name: "HomeHeading", module: HomeHeading},
 
 ];
 
@@ -47,5 +49,6 @@ export const getModule = (moduleName) => {
     (m) => m.name.toLowerCase() === moduleName.toLowerCase()
   );
   if (!obj) return null;
+  console.log("WOT WOT WOT   " + JSON.stringify(obj))
   return obj.module;
 };
