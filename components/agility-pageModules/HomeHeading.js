@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { AgilityImage } from "@agility/nextjs"
 
 const HomeHeading  = ({module}) => {
     const {fields} = module;
@@ -32,20 +33,18 @@ const HomeHeading  = ({module}) => {
         }
     };
     return(
-        <div className={"max-w-screen-xl mx-auto flex flex-row"}>
-            <div className={"w-7/12"}>
-               <caption className={"c3 text-primary-blue w-max"}>lets inspire healthcare together</caption>
-                <h1>Let's inspire<br/>healthcare together.</h1>
-                <p className={"b1 w-8/12 pl-12 border-primary-blue left-border my-6"}>CineMed is a global healthcare solutions company committed
-                    to improving patient outcomes through innovative training
-                    and customer engagement.</p>
+        <div className={"max-w-screen-xl mx-auto flex flex-row my-12"}>
+            <div className={"w-6/12"}>
+               <caption className={"c3 text-primary-blue w-max"}>{fields.blueText}</caption>
+                <h1>{fields.title}</h1>
+                <p className={"b1 w-8/12 pl-12 border-primary-blue left-border my-6"}>{fields.text}</p>
                 <div className={"flex flex-row items-center space-x-4 my-6"}>
-                    <a className={"flex bttn1 w-44 h-14 items-center bg-primary-blue rounded-full"}><p className={"mx-auto text-primary-white"}>Create course</p></a>
-                    <a className={"flex bttn1 w-44 h-14 items-center border-primary-blue rounded-full border-primary-blue border-2 text-primary-blue"}><p className={"mx-auto"}>Find a Course</p></a>
+                    <a className={"flex bttn1 w-36 h-12 items-center bg-primary-blue rounded-full"}><p className={"mx-auto text-primary-white"}>Create course</p></a>
+                    <a className={"flex bttn1 w-36 h-12 items-center border-primary-blue rounded-full border-primary-blue border-2 text-primary-blue"}><p className={"mx-auto"}>Find a Course</p></a>
                 </div>
             </div>
-            <div>
-                2
+            <div className={"w-6/12"}>
+
             </div>
         </div>
     )

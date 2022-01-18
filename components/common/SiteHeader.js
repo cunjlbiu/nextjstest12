@@ -19,9 +19,9 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
   }
 
   return (
-    <header className="relative w-full mx-auto px-8 bg-gray-500 h-24 bg-primary-white">
+    <header className="relative w-full mx-auto px-8 bg-gray-500 h-24 bg-primary-white mb-16">
       <div className="max-w-screen-xl mx-auto">
-        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <Link href="/">
               <a className="flex items-center">
@@ -69,6 +69,10 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
               );
             })}
           </nav>
+          <div className={"flex flex-row items-center space-x-4 my-6"}>
+            <a className={"flex bttn1 w-36 h-12 items-center bg-primary-blue rounded-full"}><p className={"mx-auto text-primary-white"}>Create course</p></a>
+            <a className={"flex bttn1 w-36 h-12 items-center border-primary-blue rounded-full border-primary-blue border-2 text-primary-blue"}><p className={"mx-auto"}>Find a Course</p></a>
+          </div>
         </div>
       </div>
 
@@ -137,6 +141,7 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
                     );
                   })}
                 </nav>
+
               </div>
             </div>
           </div>

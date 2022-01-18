@@ -66,5 +66,4 @@ function Layout(props) {
     </>
   );
 }
-console.log("zaebis voda3");
 export default Layout;
