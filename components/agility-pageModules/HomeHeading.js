@@ -33,7 +33,7 @@ const HomeHeading  = ({module}) => {
         }
     };
     return(
-        <div className={"max-w-screen-xl mx-auto flex flex-row my-12"}>
+        <div className={"max-w-screen-xl mx-auto flex flex-row my-8"}>
             <div className={"w-6/12"}>
                <caption className={"c3 text-primary-blue w-max"}>{fields.blueText}</caption>
                 <h1>{fields.title}</h1>
@@ -44,7 +44,7 @@ const HomeHeading  = ({module}) => {
                 </div>
             </div>
             <div className={"w-6/12"}>
-
+                <img className={"transform -translate-y-16"} src={fields.image1.url}/>
             </div>
         </div>
     )
