@@ -5,56 +5,49 @@ import {FaCheck, FaEye, FaAward, FaBookmark, FaCertificate, FaHeart, FaUserAlt} 
 
 const Cards = ({module}) =>{
     const {fields} = module;
-
-    const Card = ({card, index}) => {
+    const Card = ({iconUrl, title, text, iconBg}) => {
+        console.log(title, iconUrl)
         return(
             <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                <FaEye className={"bg-soft-blue w-8 h-8"}></FaEye>
-                <p className={"bttn1"}>{card}{index}</p>
-                <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                    Maybe it could be in two rows.</p>
+                {iconUrl ?
+                    <img className={"rounded"} src={iconUrl} height={"48"} width={"48"} style={{backgroundColor: iconBg}} />
+                    : <div className={"w-12 h-12"}/>}
+                <p className={"bttn1"}>{title}</p>
+                <p className={"b3 text-justify"}>{text}</p>
             </div>
         )
     }
 
     return(
-        <div className={"max-w-full justify-between py-6 "}>
+        <div className={"max-w-full justify-between py-6 "} style={{backgroundColor: fields.bgColor}}>
             <div className="max-w-screen-xl my-8 mx-auto grid grid-cols-2 justify-center space-y-5">
-                <div className={"grid grid-cols-2"}>
+                <div className={"grid grid-cols-2 justify-center"}>
                     <div className={"space-y-8"}>
-                        <Card></Card>
-                        <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                            <FaBookmark className={"bg-soft-blue w-8 h-8"}></FaBookmark>
-                            <p className={"bttn1"}>CME or Non-CME</p>
-                            <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                                Maybe it could be in two rows.</p>
-                        </div>
-                        <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                            <FaAward className={"bg-soft-blue w-8 h-8"}></FaAward>
-                            <p className={"bttn1"}>Specialities</p>
-                            <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                                Maybe it could be in two rows.</p>
-                        </div>
+                        {fields.cards.slice(0).reverse().map((card, index) => {
+                            if (index % 2 === 0)
+                            return(
+                                <Card key={card.contentID.toString()}
+                                      title={card.fields.title}
+                                      text={card.fields.text}
+                                      iconUrl={card.fields.icon ? card.fields.icon.url : ''}
+                                      iconBg={card.fields.iconBackground}
+                                />
+                            )
+                        })
+                        }
                     </div>
                     <div className={"transform translate-y-6 space-y-8"}>
-                        <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                            <FaUserAlt className={"bg-soft-blue w-8 h-8"}></FaUserAlt>
-                            <p className={"bttn1"}>In-Person</p>
-                            <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                                Maybe it could be in two rows.</p>
-                        </div>
-                        <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                            <FaCertificate className={"bg-soft-blue w-8 h-8"}></FaCertificate>
-                            <p className={"bttn1"}>Topics</p>
-                            <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                                Maybe it could be in two rows.</p>
-                        </div>
-                        <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                            <FaHeart className={"bg-soft-blue w-8 h-8"}></FaHeart>
-                            <p className={"bttn1"}>And many more...</p>
-                            <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                                Maybe it could be in two rows.</p>
-                        </div>
+                        {fields.cards.slice(0).reverse().map((card, index) => {
+                            if (index % 2 !== 0)
+                                return(
+                                    <Card key={card.contentID.toString()}
+                                          title={card.fields.title}
+                                          text={card.fields.text}
+                                          iconUrl={card.fields.icon ? card.fields.icon.url : ''}
+                                          iconBg={card.fields.iconBackground}/>
+                                )
+                        })
+                        }
                     </div>
                 </div>
                 <div className={"space-y-5 mx-auto py-28"}>

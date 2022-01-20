@@ -8,9 +8,7 @@ const Video = ({module}) => {
     }
     return(
         <div className={"flex max-w-full justify-center py-12"} style={bgGradient}>
-            <div className={""} dangerouslySetInnerHTML={renderHTML(fields.video)}>
-
-            </div>
+            <div className={"rounded-2xl"} dangerouslySetInnerHTML={renderHTML(fields.video)}/>
         </div>
     );
 

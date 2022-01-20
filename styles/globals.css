@@ -115,20 +115,20 @@ h3 {
   font-weight: 600;
   font-family: 'Outfit', sans-serif;
 }
-caption.c1{
+.c1{
   font-size: 32px;
   line-height: 40px;
   font-weight: 500;
   font-family: 'Outfit', sans-serif;
 }
-caption.c2{
+.c2{
    font-size: 18px;
    line-height: 32px;
   font-weight: 600;
    font-family: 'Outfit', sans-serif;
  }
 
-caption.c3{
+.c3{
   font-size: 16px;
   line-height: 34px;
   font-weight: 500;
@@ -137,4 +137,17 @@ caption.c3{
 }
 .card{
   border-color: #EDF2F4;
+}
+
+iframe{
+  border-radius: inherit;
+}
+
+a.bttn1:active {
+  transform: scale(0.9);
+}
+a.bttn1:hover{
+  background-color: #243e63;
+  border: none;
+  color: white;
 }

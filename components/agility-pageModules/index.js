@@ -21,6 +21,7 @@ import FindCourse from "./FindCourse"
 import Cards from "./Cards";
 import TitleWithText from "./TitleWithText";
 import Video from "./Video";
+import HorizontalCards from "./HorizontalCards";
 
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
@@ -50,6 +51,7 @@ const allModules = [
   { name: "Cards", module: Cards},
   { name: "Video", module: Video},
   { name: "TitleWithText", module: TitleWithText},
+  { name: "HorizontalCards", module: HorizontalCards},
 
 ];
 

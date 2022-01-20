@@ -33,18 +33,20 @@ const HomeHeading  = ({module}) => {
         }
     };
     return(
-        <div className={"max-w-screen-xl mx-auto flex flex-row my-8"}>
-            <div className={"w-6/12"}>
-               <caption className={"c3 text-primary-blue w-max"}>{fields.blueText}</caption>
-                <h1>{fields.title}</h1>
-                <p className={"b1 w-8/12 pl-12 border-primary-blue left-border my-6"}>{fields.text}</p>
-                <div className={"flex flex-row items-center space-x-4 my-6"}>
-                    <a className={"flex bttn1 w-36 h-12 items-center bg-primary-blue rounded-full"}><p className={"mx-auto text-primary-white"}>Create course</p></a>
-                    <a className={"flex bttn1 w-36 h-12 items-center border-primary-blue rounded-full border-primary-blue border-2 text-primary-blue"}><p className={"mx-auto"}>Find a Course</p></a>
+        <div style={{backgroundColor: fields.bgColor}}>
+            <div className={"max-w-screen-xl mx-auto flex flex-row my-8"}>
+                <div className={"w-6/12"}>
+                   <caption className={"c3 text-primary-blue w-max"}>{fields.blueText}</caption>
+                    <h1>{fields.title}</h1>
+                    <p className={"b1 w-8/12 pl-12 border-primary-blue left-border my-6"}>{fields.text}</p>
+                    <div className={"flex flex-row items-center space-x-4 my-6"}>
+                        <a className={"flex bttn1 w-36 h-12 items-center bg-primary-blue rounded-full"}><p className={"mx-auto text-primary-white"}>Create course</p></a>
+                        <a className={"flex bttn1 w-36 h-12 items-center border-primary-blue rounded-full border-primary-blue border-2 text-primary-blue"}><p className={"mx-auto"}>Find a Course</p></a>
+                    </div>
                 </div>
-            </div>
-            <div className={"w-6/12"}>
-                <img className={"transform -translate-y-16"} src={fields.image1.url}/>
+                <div className={"w-6/12"}>
+                    <img className={"transform -translate-y-16"} src={fields.image.url}/>
+                </div>
             </div>
         </div>
     )
