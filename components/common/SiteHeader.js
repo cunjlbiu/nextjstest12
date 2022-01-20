@@ -5,7 +5,6 @@ import head from "next/head";
 const SiteHeader = ({ globalData, sitemapNode, page }) => {
   // get header data
   const { header } = globalData;
-
   // open / close mobile nav
   const [open, setOpen] = useState(false);
 
@@ -62,7 +61,7 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
             {header.links.map((navitem, index) => {
               return (
                 <Link href={navitem.path} key={`mobile-${index}`}>
-                  <a className="text-base leading-6 font-medium text-secondary-500 hover:text-primary-500 border-transparent border-b-2 hover:border-primary-500 hover:border-b-primary hover:border-b-2 focus:outline-none focus:text-primary-500 transition duration-300">
+                  <a className="b3 hover:text-primary-500 hover:border-primary-500 hover:border-b-primary hover:border-b-2 focus:outline-none focus:text-primary-500 transition duration-300">
                     {navitem.title}
                   </a>
                 </Link>

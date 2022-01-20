@@ -6,17 +6,23 @@ import {FaCheck, FaEye, FaAward, FaBookmark, FaCertificate, FaHeart, FaUserAlt} 
 const Cards = ({module}) =>{
     const {fields} = module;
 
+    const Card = ({card, index}) => {
+        return(
+            <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
+                <FaEye className={"bg-soft-blue w-8 h-8"}></FaEye>
+                <p className={"bttn1"}>{card}{index}</p>
+                <p className={"b3 text-justify"}>Some text about this feature.<br/>
+                    Maybe it could be in two rows.</p>
+            </div>
+        )
+    }
+
     return(
         <div className={"max-w-full justify-between py-6 "}>
             <div className="max-w-screen-xl my-8 mx-auto grid grid-cols-2 justify-center space-y-5">
                 <div className={"grid grid-cols-2"}>
                     <div className={"space-y-8"}>
-                        <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
-                            <FaEye className={"bg-soft-blue w-8 h-8"}></FaEye>
-                            <p className={"bttn1"}>Virtual</p>
-                            <p className={"b3 text-justify"}>Some text about this feature.<br/>
-                                Maybe it could be in two rows.</p>
-                        </div>
+                        <Card></Card>
                         <div className={"border-2 border-agility w-80 h-48 card p-4 space-y-3"}>
                             <FaBookmark className={"bg-soft-blue w-8 h-8"}></FaBookmark>
                             <p className={"bttn1"}>CME or Non-CME</p>

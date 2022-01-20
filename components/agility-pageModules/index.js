@@ -19,6 +19,8 @@ import HomeHeading from "./HomeHeading";
 import Logos from "./Logos"
 import FindCourse from "./FindCourse"
 import Cards from "./Cards";
+import TitleWithText from "./TitleWithText";
+import Video from "./Video";
 
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
@@ -46,6 +48,8 @@ const allModules = [
   { name: "Logos", module: Logos},
   { name: "FindCourse", module: FindCourse},
   { name: "Cards", module: Cards},
+  { name: "Video", module: Video},
+  { name: "TitleWithText", module: TitleWithText},
 
 ];
 
